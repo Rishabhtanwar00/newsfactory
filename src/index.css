@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+button {
+	background-color: transparent;
+	/* border: none; */
+	cursor: pointer;
+	outline: none;
+}
+
+::selection {
+	background-color: #d10000;
+	color: #ffffff;
+}
