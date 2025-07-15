@@ -1,11 +1,14 @@
 import { newsArticles } from '../utils/Data';
-import { formatDateTime } from '../utils/CommonFunctions';
+import { formatDateTime, processvalue } from '../utils/CommonFunctions';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
 	return (
 		<div className='py-5 flex flex-col lg:flex-row gap-10 lg:gap-5'>
-			<Link to='' className='w-full lg:w-[65%] flex flex-col tracking-wide'>
+			<Link
+				to={`/${processvalue(newsArticles[0].title)}`}
+				className='w-full lg:w-[65%] flex flex-col tracking-wide'
+			>
 				<img
 					src={newsArticles[0].image}
 					alt='Featured article'
@@ -33,7 +36,11 @@ const HeroSection = () => {
 			</Link>
 			<div className='w-full lg:w-[35%] flex flex-col gap-8 lg:gap-5 text-sm tracking-wide'>
 				{newsArticles.slice(1, 4).map((article) => (
-					<Link to='/' key={article.id} className='flex gap-3'>
+					<Link
+						to={`/${processvalue(article.title)}`}
+						key={article.id}
+						className='flex gap-3'
+					>
 						<img
 							src={article.image}
 							alt='Featured article'

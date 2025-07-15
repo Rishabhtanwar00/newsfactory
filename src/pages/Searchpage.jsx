@@ -4,6 +4,7 @@ import SideNewsFeed from '../components/SideNewsFeed';
 import { FaSearch } from 'react-icons/fa';
 import { useDebounce } from '../hooks/useDebounce';
 import { Link, useSearchParams } from 'react-router-dom';
+import { processvalue } from '../utils/CommonFunctions';
 
 const Searchpage = () => {
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -69,7 +70,11 @@ const Searchpage = () => {
 					<div className='flex flex-col gap-5 my-10 items-center'>
 						{filteredNews.length > 0 ? (
 							filteredNews.map((article) => (
-								<Link to='/' key={article.id} className='flex gap-3'>
+								<Link
+									to={`/${processvalue(article.title)}`}
+									key={article.id}
+									className='flex gap-3'
+								>
 									<img
 										src={article.image}
 										alt='Featured article'

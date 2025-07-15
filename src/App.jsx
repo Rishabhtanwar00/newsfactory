@@ -4,6 +4,7 @@ import Homepage from './pages/Homepage';
 import Footer from './components/Footer';
 import SignIn from './pages/SignIn';
 import Searchpage from './pages/Searchpage';
+import NewsArticle from './pages/NewsArticle';
 
 function App() {
 	return (
@@ -14,8 +15,10 @@ function App() {
 			<div className='mt-[64px] lg:mt-[106px] px-[5vw] sm:px-[15vw]'>
 				<Routes>
 					<Route path='/' element={<Homepage />} />
-					<Route path='signin' element={<SignIn />} />
-					<Route path='search' element={<Searchpage />} />
+					<Route path='/signin' element={<SignIn />} />
+					<Route path='/search' element={<Searchpage />} />
+					<Route path='/:news_title' element={<NewsArticle />} />
+
 					<Route
 						path='*'
 						element={

@@ -19,7 +19,7 @@ const Navbar = () => {
 
 	return (
 		<div className='relative w-full bg-back'>
-			<nav className='relative flex items-center justify-between p-3 px-[5vw] sm:pr-[40px] shadow z-[100]'>
+			<nav className='relative flex items-center justify-between p-3 px-[5vw] pl-[2vw] sm:pr-[40px] shadow z-[100]'>
 				<button
 					onClick={toogleMenu}
 					className='rounded-md hover:bg-gray-100 active:scale-95 transition-all duration-300 ease-in-out p-1'

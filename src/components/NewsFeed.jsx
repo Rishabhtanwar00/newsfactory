@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { processvalue } from '../utils/CommonFunctions';
 
 const NewsFeed = ({ heading, newsArray }) => {
 	return (
@@ -8,7 +9,11 @@ const NewsFeed = ({ heading, newsArray }) => {
 			</h1>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-10 text-sm tracking-wide'>
 				{newsArray.map((article) => (
-					<Link to='/' key={article.id} className='flex flex-col gap-2'>
+					<Link
+						to={`/${processvalue(article.title)}`}
+						key={article.id}
+						className='flex flex-col gap-2'
+					>
 						<div className='flex gap-2'>
 							<img
 								src={article.image}

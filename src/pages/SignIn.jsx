@@ -23,7 +23,7 @@ const SignIn = () => {
 			</div>
 			<form
 				onSubmit={submitHandler}
-				className='mt-3 flex flex-col w-full max-w-[350px] sm:w-fit items-center justify-center'
+				className='mt-3 flex flex-col w-full max-w-[400px] sm:w-fit items-center justify-center'
 			>
 				{currentState === 'Sign Up' && (
 					<input
@@ -48,7 +48,7 @@ const SignIn = () => {
 					required
 					onChange={(e) => handleChange('password', e.target.value)}
 				/>
-				<div className='flex justify-between mt-2 text-light text-sm'>
+				<div className='w-full flex justify-between mt-2 text-light text-sm'>
 					<p className='cursor-pointer hover:text-primary transition-all duration-150 ease-in-out'>
 						Forget Password?
 					</p>
