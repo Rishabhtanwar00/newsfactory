@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { newsArticles } from '../utils/Data';
-import NewsFeed from '../components/NewsFeed';
 import SideNewsFeed from '../components/SideNewsFeed';
 import { FaSearch } from 'react-icons/fa';
 import { useDebounce } from '../hooks/useDebounce';

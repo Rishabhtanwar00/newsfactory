@@ -1,14 +1,13 @@
 import Logo from '../assets/newsfactory.png';
 import MenuIcon from '../assets/menuicon.png';
 import CloseIcon from '../assets/closeicon.png';
-import SearchIcon from '../assets/searchicon.png';
-import UserIcon from '../assets/usericon.png';
 
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import SideMenu from './SideMenu';
 import { processvalue } from '../utils/CommonFunctions';
 import { newsCategories } from '../utils/Data';
+import { FaSearch, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
 	const location = useLocation().pathname;
@@ -20,7 +19,7 @@ const Navbar = () => {
 
 	return (
 		<div className='relative w-full bg-back'>
-			<nav className='relative flex items-center justify-between p-3 px-[20px] pr-[40px] shadow z-[100]'>
+			<nav className='relative flex items-center justify-between p-3 px-[5vw] sm:pr-[40px] shadow z-[100]'>
 				<button
 					onClick={toogleMenu}
 					className='rounded-md hover:bg-gray-100 active:scale-95 transition-all duration-300 ease-in-out p-1'
@@ -40,9 +39,9 @@ const Navbar = () => {
 				<div className='hidden md:flex items-center gap-2 lg:gap-4 text-sm lg:text-base tracking-wide'>
 					<NavLink
 						to='/search'
-						className='rounded-md hover:bg-gray-100 active:scale-95 transition-all duration-300 ease-in-out p-1'
+						className='p-2 flex items-center justify-center rounded active:scale-95 transition-all duration-300 ease-in-out hover:bg-gray-100'
 					>
-						<img src={SearchIcon} alt='' className='h-6 lg:h-7 w-auto' />
+						<FaSearch size={18} />
 					</NavLink>
 					<NavLink
 						to='/signin'
@@ -57,13 +56,18 @@ const Navbar = () => {
 						<p>Subscribe</p>
 					</NavLink>
 				</div>
-				<div className='block md:hidden'>
-					<NavLink to='/signin'>
-						<img
-							src={UserIcon}
-							alt=''
-							className='h-8 w-auto bg-gray-100 p-1 rounded-md active:scale-95 transition-all duration-300 ease-in-out'
-						/>
+				<div className='flex md:hidden gap-2'>
+					<NavLink
+						to='/search'
+						className='p-2 flex items-center justify-center bg-gray-100 rounded active:scale-95 transition-all duration-300 ease-in-out hover:bg-gray-200'
+					>
+						<FaSearch size={18} />
+					</NavLink>
+					<NavLink
+						to='/signin'
+						className='p-2 flex items-center justify-center bg-primary rounded active:scale-95 transition-all duration-300 ease-in-out hover:bg-dark'
+					>
+						<FaUser size={16} className='text-white' />
 					</NavLink>
 				</div>
 			</nav>
