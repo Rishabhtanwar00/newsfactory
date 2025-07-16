@@ -71,7 +71,7 @@ const Searchpage = () => {
 						{filteredNews.length > 0 ? (
 							filteredNews.map((article) => (
 								<Link
-									to={`/${processvalue(article.title)}`}
+									to={`/news/${processvalue(article.title)}`}
 									key={article.id}
 									className='flex gap-3'
 								>
@@ -106,7 +106,11 @@ const Searchpage = () => {
 									</h1>
 									<div className='flex flex-col gap-5'>
 										{newsArticles.slice(0, 4).map((article) => (
-											<Link to='/' key={article.id} className='flex gap-3'>
+											<Link
+												to={`/news/${processvalue(article.title)}`}
+												key={article.id}
+												className='flex gap-3'
+											>
 												<img
 													src={article.image}
 													alt='Featured article'

@@ -10,7 +10,7 @@ const SideNewsFeed = ({ heading, newsArray }) => {
 			<div className='flex flex-col gap-5'>
 				{newsArray.map((article) => (
 					<Link
-						to={`/${processvalue(article.title)}`}
+						to={`/news/${processvalue(article.title)}`}
 						key={article.id}
 						className='flex flex-col gap-2'
 					>

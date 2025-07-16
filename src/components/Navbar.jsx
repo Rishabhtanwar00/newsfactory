@@ -32,6 +32,7 @@ const Navbar = () => {
 				</button>
 				<NavLink
 					to='/'
+					onClick={() => setShowMenu(false)}
 					className='absolute left-1/2 transform -translate-x-1/2'
 				>
 					<img src={Logo} alt='' className='h-8 lg:h-10 w-auto' />

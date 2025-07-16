@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import { newsArticles } from '../utils/Data';
 import SideNewsFeed from '../components/SideNewsFeed';
 import NewsFeed from '../components/NewsFeed';
+import Subscribenow from '../components/Subscribenow';
 
 const Homepage = () => {
 	return (
@@ -52,6 +52,9 @@ const Homepage = () => {
 						/>
 					</div>
 				</div>
+			</div>
+			<div className='w-full sm:max-w-[60%] m-auto mb-10'>
+				<Subscribenow />
 			</div>
 		</div>
 	);

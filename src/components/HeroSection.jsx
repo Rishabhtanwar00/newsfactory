@@ -6,7 +6,7 @@ const HeroSection = () => {
 	return (
 		<div className='py-5 flex flex-col lg:flex-row gap-10 lg:gap-5'>
 			<Link
-				to={`/${processvalue(newsArticles[0].title)}`}
+				to={`/news/${processvalue(newsArticles[0].title)}`}
 				className='w-full lg:w-[65%] flex flex-col tracking-wide'
 			>
 				<img
@@ -37,7 +37,7 @@ const HeroSection = () => {
 			<div className='w-full lg:w-[35%] flex flex-col gap-8 lg:gap-5 text-sm tracking-wide'>
 				{newsArticles.slice(1, 4).map((article) => (
 					<Link
-						to={`/${processvalue(article.title)}`}
+						to={`/news/${processvalue(article.title)}`}
 						key={article.id}
 						className='flex gap-3'
 					>
